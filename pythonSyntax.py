@@ -24,7 +24,20 @@ print("Gred", 3.14, 10) # this is a single line comment
 # - Booleans
 # - Type checking with type()
 # ==========================================================
+message = "Welcome to FIU"
+print(type(message)) #type() is a function too, displays the datatype of an object
+print(message)
 
+a = 10
+b = 2
+print(type(a), type(b))
+
+isOpen = True
+print(type(isOpen))
+
+print(message[0]) #outputs first index of a string
+print(type(message[0]))
+print(message[5])
 
 
 # ==========================================================
@@ -35,6 +48,15 @@ print("Gred", 3.14, 10) # this is a single line comment
 # - Logical (and, or, not)
 # ==========================================================
 
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(7 / 2) #division
+print(7 // 2) #integer division
+print(7 % 2)
+print(a ** b) #exponents
 
 
 # ==========================================================
@@ -45,8 +67,19 @@ print("Gred", 3.14, 10) # this is a single line comment
 # - Common methods (.upper(), .lower(), .strip(), etc.)
 # ==========================================================
 
+first_name = "Sebastian"
+last_name = "Medina"
 
+print(first_name + last_name) #one object
+print(first_name + " " + last_name) #still one object
+print(first_name, last_name) #two objects
 
+print(f"My name is {first_name} {last_name}.") #"f" formats (like printf) and string objects must be encased in {}
+print(f"My name is {first_name.upper()} {last_name.title()}.")
+print("2" + "3") #concatination
+print(2 + 3) #addition
+
+print("***Welcome to Software Dev***".strip('*'))
 # ==========================================================
 # 5. LISTS
 # ----------------------------------------------------------
@@ -56,8 +89,33 @@ print("Gred", 3.14, 10) # this is a single line comment
 # - Useful methods (.append(), .remove(), .sort(), etc.)
 # ==========================================================
 
+# Lists (often associated with Arrays)
+professors = ["greg", "richard", "kianoosh", "debra", "jason", "leo", "heather"]
+print(type(professors))
+print(professors[0]) #returns first index
+print(professors[-1]) #returns last index
+print(professors[2:5]) #defines what indexes are included (2,3,4)
+print(professors[:5]) #starts from index 0, ends at 4
+print(professors[3:]) #starts from index 3 all the way to the end
+print(professors[:]) #outputs everything (creates a copy of a given list)
 
+professors.append("todd")
+print(professors)
+professors.extend(["michael", "mustafa", "naomi"])
+print(professors)
+professors.insert(2, "vyoma")
+print(professors)
+professors.remove("greg")
+print(professors)
+x = professors.pop(2) #removes a record based off index
+print(professors,x)
+professors.reverse()
+print(professors)
 
+professors.sort() #sorts in alphabetical order
+print(professors)
+professors.sort(reverse=True) #does so in reverse order
+print(professors)
 # ==========================================================
 # 6. TUPLES AND SETS
 # ----------------------------------------------------------
@@ -65,6 +123,12 @@ print("Gred", 3.14, 10) # this is a single line comment
 # - Sets: unique collections
 # ==========================================================
 
+grades = (88.3, 78, 99.5) #immutable, cannot alter
+print(type(grades))
+# grades[0] = 91.3 would give an error
+
+members = {"greg", "richard", "greg"}
+print(members) # this is going to be the answer of a future assignment :)
 
 
 # ==========================================================
