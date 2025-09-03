@@ -13,9 +13,9 @@ Explanations and examples will be added by Greg.
 # - Single-line comments
 # - Multi-line comments (docstrings)
 # ==========================================================
+print("Gred", 3.14, 10) # this is a single line comment
 
-
-
+"""This is a block comment"""
 # ==========================================================
 # 2. VARIABLES AND DATA TYPES
 # ----------------------------------------------------------
