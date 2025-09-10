@@ -125,6 +125,8 @@ class VideoStreamingService(StreamingService):
 Netflix = VideoStreamingService("Netflix", 15.99)
 Netflix.display()
 print(Netflix.add_subscriber("Sebas"))
+print(Netflix.add_subscriber("John"))
 print(Netflix.subscribersList)
 print(Netflix.subscribersList[0])
+print(Netflix.subscribersList[1])
 
