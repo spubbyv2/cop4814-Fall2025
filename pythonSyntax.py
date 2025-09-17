@@ -116,6 +116,20 @@ professors.sort() #sorts in alphabetical order
 print(professors)
 professors.sort(reverse=True) #does so in reverse order
 print(professors)
+
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])       # apple
+print(fruits[-1])      # cherry
+fruits.append("mango") # add element
+fruits.extend(["strawberry", "grapefruit"])
+fruits.insert(1,"kiwi")
+fruits.remove("banana")
+firstFruit=fruits.pop(0)
+print(fruits, firstFruit)
+fruits[2]="passion fruit"
+fruits.reverse()
+fruits.sort()
+fruits.sort(reverse=True)
 # ==========================================================
 # 6. TUPLES AND SETS
 # ----------------------------------------------------------
@@ -139,7 +153,10 @@ print(members) # this is going to be the answer of a future assignment :)
 # - Common methods (.keys(), .values(), .items())
 # ==========================================================
 
-
+student = {"name": "Alice", "age": 20, "major": "CS"}
+print(student["name"])       # Alice
+student["age"] = 21          # update value
+print(student.keys())        # dict_keys(['name', 'age', 'major'])
 
 
 # ==========================================================
@@ -149,7 +166,13 @@ print(members) # this is going to be the answer of a future assignment :)
 # - Nested conditionals
 # ==========================================================
 
-
+grade = 85
+if grade >= 90:
+    print("A")
+elif grade >= 80:
+    print("B")
+else:
+    print("C")
 
 # ==========================================================
 # 9. LOOPS
@@ -159,7 +182,13 @@ print(members) # this is going to be the answer of a future assignment :)
 # - break and continue
 # ==========================================================
 
+for fruit in fruits:
+    print("I like", fruit)
 
+count = 0
+while count < 3:
+    print("count =", count)
+    count += 1
 
 # ==========================================================
 # 10. FUNCTIONS
@@ -168,6 +197,16 @@ print(members) # this is going to be the answer of a future assignment :)
 # - Parameters and return values
 # - Default arguments
 # ==========================================================
+def square(x):
+    return x * x
+
+print(square(5))  # 25
+
+def greet(name="student"):
+    return f"Hello, {name}!"
+
+print(greet())         # Hello, student!
+print(greet("Greg"))   # Hello, Greg!
 
 
 
@@ -178,7 +217,11 @@ print(members) # this is going to be the answer of a future assignment :)
 # - Using functions from modules
 # ==========================================================
 
+import math
+print(math.sqrt(16))  # 4.0
 
+import random
+print(random.choice(fruits))  # random fruit
 
 # ==========================================================
 # 12. ERROR HANDLING (OPTIONAL)
@@ -186,6 +229,9 @@ print(members) # this is going to be the answer of a future assignment :)
 # - try, except
 # - Handling different exception types
 # ==========================================================
-
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
 
 
