@@ -24,11 +24,9 @@ class Duck:
     def quack(self):
         self.quack_behavior.quack()
 
-    # TODO: write the set_quack_behavior method
     def set_quack_behavior(self, new_quack_behavior):
         self.quack_behavior = new_quack_behavior
 
-    # TODO: write the set_fly_behavior method
     def set_fly_behavior(self, new_fly_behavior):
         self.fly_behavior = new_fly_behavior
 
@@ -36,6 +34,7 @@ class Duck:
         print("All ducks float, even decoys!!")
 
 class MallardDuck(Duck):
+
     def __init__(self):
         self.fly_behavior = FlyWithWings()
         self.quack_behavior = Quack()
@@ -45,39 +44,33 @@ class MallardDuck(Duck):
 
 class DecoyDuck(Duck):
 
-    # TODO: write the init method
     def __init__(self):
         self.fly_behavior = FlyNoWay()
         self.quack_behavior = MuteQuack()
 
-    # TODO: write the display method
     def display(self):
         print("I'm a Decoy duck, not a real duck")
 
 class RubberDuck(Duck):
 
-    # TODO: write the init method
+
     def __init__(self):
         self.fly_behavior = FlyNoWay()
         self.quack_behavior = Squeak()
 
-    # TODO: write the display method
+
     def display(self):
         print("I'm a Rubber duck, not a real duck")
 
 class RedHeadDuck(Duck):
 
-    # TODO: write the init method
+
     def __init__(self):
         self.fly_behavior = FlyWithWings()
         self.quack_behavior = Quack()
 
-
-    # TODO: write the display method
     def display(self):
         print("I'm a real Red Head duck")
-
-# TODO: write the ModelDuck class
 
 class ModelDuck(Duck):
     def __init__(self):
@@ -99,16 +92,14 @@ class Quack(QuackBehavior):
     def quack(self):
         print("Quack")
 
-# TODO: write the MuteQuack class
 class MuteQuack(QuackBehavior):
     def quack(self):
         print("...")
 
-# TODO: write the Squeak class
 class Squeak(QuackBehavior):
     def quack(self):
         print("Squeak")
-# TODO: write the FakeQuack class
+
 class FakeQuack(QuackBehavior):
     def quack(self):
         print("Queek")
@@ -125,25 +116,20 @@ class FlyWithWings(FlyBehavior):
     def fly(self):
         print("I'm flying!!")
 
-
-# TODO: write the FlyNoWay class
 class FlyNoWay(FlyBehavior):
     def fly(self):
         print("I cannot fly!!")
 
-# TODO: write the FlyRocketPowered class
 class FlyRocketPowered(FlyBehavior):
     def fly(self):
         print("I'm flying like a rocket!!")
 
 if __name__ == '__main__':
-    # TODO: instantiate an object of MallardDuck
+
     Duck1 = MallardDuck()
 
-    # TODO: instantiate an object of RedHeadDuck
     Duck2 = RedHeadDuck()
 
-    # TODO: instantiate an object of ModelDuck
     Duck3 = ModelDuck()
 
     Duck4 = DecoyDuck()
